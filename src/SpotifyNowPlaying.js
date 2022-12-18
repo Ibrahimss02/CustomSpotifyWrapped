@@ -6,6 +6,7 @@ import {
   Text,
   Link,
   Spinner,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import styled from "styled-components";
 import getNowPlayingItem from "./SpotifyApi";
@@ -45,12 +46,17 @@ const SpotifyNowPlaying = (props) => {
               {result.isPlaying && <PlayingAnimation />}
             </Stack>
             {result.isPlaying &&
-              <Box p={2}>
+              <Box p={2} className="box">
                 <Stack direction="row" spacing={4} align="center">
-                  <Image
+                  <Image className="image"
                     alt={`${result.title} album art`}
                     src={result.albumImageUrl}
-                    boxSize="100px"
+                    boxSize="85px"
+                    sx={{
+                      '@media (max-width: 1600px)': {
+                        boxSize: "80px",
+                      },
+                    }}
                   />
                   <Stack spacing={0} overflow="hidden">
                     <Link href={result.songUrl} target="_blank">
@@ -63,13 +69,13 @@ const SpotifyNowPlaying = (props) => {
                         {result.title}
                       </Text>
                     </Link>
-                    <Text
+                    <Text className="text"
                       color="blue.800"
                       isTruncated
                     >
                       {result.artist}
                     </Text>
-                    <Text
+                    <Text className="text"
                       fontSize="sm"
                       color="blue.800"
                     >
@@ -98,5 +104,13 @@ const Center = styled.div`
   :hover {
     border: 1px solid rgba(255, 255, 255, 0.8);
     transform: translateY(-3px);
+  }
+
+  @media (max-width: 1600px) {
+    margin-top: 2rem;
+
+    .text {
+      font-size: 12px;
+    }
   }
 `;

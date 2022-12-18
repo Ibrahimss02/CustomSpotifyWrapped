@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CustomSpotifyWrapped/static/css/main.143c9c84.css",
-    "main.js": "/CustomSpotifyWrapped/static/js/main.546253c6.js",
+    "main.js": "/CustomSpotifyWrapped/static/js/main.5a3874df.js",
     "static/js/227.ce0e6c22.chunk.js": "/CustomSpotifyWrapped/static/js/227.ce0e6c22.chunk.js",
     "static/js/526.7e41d92e.chunk.js": "/CustomSpotifyWrapped/static/js/526.7e41d92e.chunk.js",
     "static/js/232.ff30db9c.chunk.js": "/CustomSpotifyWrapped/static/js/232.ff30db9c.chunk.js",
@@ -14,7 +14,7 @@
     "static/media/podcast_blob.svg": "/CustomSpotifyWrapped/static/media/podcast_blob.6055f24a5febdf7ba205ac6403155d2e.svg",
     "static/media/podcast_blob2.svg": "/CustomSpotifyWrapped/static/media/podcast_blob2.450ebb40fc558d30d036206cd30e23ac.svg",
     "main.143c9c84.css.map": "/CustomSpotifyWrapped/static/css/main.143c9c84.css.map",
-    "main.546253c6.js.map": "/CustomSpotifyWrapped/static/js/main.546253c6.js.map",
+    "main.5a3874df.js.map": "/CustomSpotifyWrapped/static/js/main.5a3874df.js.map",
     "227.ce0e6c22.chunk.js.map": "/CustomSpotifyWrapped/static/js/227.ce0e6c22.chunk.js.map",
     "526.7e41d92e.chunk.js.map": "/CustomSpotifyWrapped/static/js/526.7e41d92e.chunk.js.map",
     "232.ff30db9c.chunk.js.map": "/CustomSpotifyWrapped/static/js/232.ff30db9c.chunk.js.map",
@@ -22,6 +22,6 @@
   },
   "entrypoints": [
     "static/css/main.143c9c84.css",
-    "static/js/main.546253c6.js"
+    "static/js/main.5a3874df.js"
   ]
 }

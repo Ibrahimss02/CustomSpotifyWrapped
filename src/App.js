@@ -19,10 +19,11 @@ export default function App() {
 
   useEffect(() => {
     disableScroll();
+    window.scrollTo(0,0);
+    document.title = "Ibrahim's Spotify Wrapped"
   }, []);
 
   function disableScroll() { 
-    console.log("disabled");
     document.body.classList.add("remove-scrolling");
   } 
   
@@ -264,6 +265,11 @@ const Wrapper = styled.div`
       transform: scale(0.715);
       transform-origin: top right;
     }
+
+    @media (max-width: 1366px) {
+      transform: scale(0.65);
+      transform-origin: top right;
+    }
   }
 `;
 
@@ -278,6 +284,10 @@ const Content = styled.div`
     gap: 40px;
   }
 
+  @media (max-width: 1366px) {
+    gap: 20px;
+  }
+
   h1 {
     font-family: "Spline Sans Mono", monospace;
     font-weight: bold;
@@ -289,27 +299,11 @@ const Content = styled.div`
       font-size: 50px;
       max-width: 500px;
     }
-  }
 
-  h2 {
-    font-family: "Spline Sans Mono", monospace;
-    color: #5786ca;
-    font-weight: bold;
-    font-size: 70px;
-    margin: 0;
-    max-width: 800px;
-    margin: 0 30px 0 100px;
-
-    @media (max-width: 1024px) {
-      font-size: 60px;
-      max-width: 300px;
-    }
-    @media (max-width: 800px) {
-      font-size: 40px;
-      max-width: 300px;
-    }
-    @media (max-width: 600px) {
-      padding-top: 250px;
+    @media (max-width: 1366px) {
+      font-size: 42px;
+      max-width: 500px;
+      margin: 80px 30px 0 75px;
     }
   }
 
@@ -323,17 +317,13 @@ const Content = styled.div`
     @media (max-width: 1600px) {
       font-size: 16px;
     }
+
+    @media (max-width: 1366px) {
+      font-size: 16px;
+      margin: 0 30px 0 75px;
+    }
   }
 
-  /* h1,
-  p,
-  button {
-    margin: 0 30px 0 100px;
-
-    @media (max-width: 1024px) {
-      margin: 0 30px;
-    }
-  } */
 `;
 
 const Menu = styled.ul`
@@ -347,22 +337,8 @@ const Menu = styled.ul`
     margin: 15px 100px;
   }
 
-  li {
-    list-style: none;
-    margin: 0;
-
-    a {
-      text-decoration: none;
-      color: white;
-      padding: 8px 20px;
-      border: 1px solid rgba(255, 255, 255, 0);
-      border-radius: 14px;
-      transition: 1s;
-
-      :hover {
-        border: 1px solid rgba(255, 255, 255, 0.2);
-      }
-    }
+  @media (max-width: 1600px) {
+    margin: 15px 75px;
   }
 `;
 
@@ -388,6 +364,12 @@ const PlaytimeWrapper = styled.div`
 
     @media (max-width: 1600px) {
       transform: scale(0.75);
+      transform-origin: top right;
+    }
+
+    @media (max-width: 1366px) {
+      transform: scale(0.65);
+      top: 25px;
       transform-origin: top right;
     }
   }
@@ -416,6 +398,12 @@ const PlaytimeContent = styled.div`
       max-width: 600px;
       margin: 200px 30px 0 100px;
     }
+
+    @media (max-width: 1366px) {
+      font-size: 42px;
+      max-width: 500px;
+      margin: 100px 30px 0 75px;
+    }
   }
 
   h2 {
@@ -428,6 +416,11 @@ const PlaytimeContent = styled.div`
 
     @media (max-width: 1600px) {
       font-size: 42px;
+    }
+
+    @media (max-width: 1366px) {
+      font-size: 28px;
+      margin: 0 30px 0 75px;
     }
   }
 
@@ -442,17 +435,13 @@ const PlaytimeContent = styled.div`
       font-size: 16px;
       max-width: 500px;
     }
-  }
 
-  /* h1,
-  p,
-  button {
-    margin: 0 30px 0 100px;
-
-    @media (max-width: 1024px) {
-      margin: 0 30px;
+    @media (max-width: 1600px) {
+      font-size: 16px;
+      max-width: 500px;
+      margin: -20px 30px 0 75px;
     }
-  } */
+  }
 `;
 
 const SongsWrapper = styled.div`
@@ -475,6 +464,11 @@ const SongsWrapper = styled.div`
       margin-top: 60px;
       font-size: 60px;
     }
+
+    @media (max-width: 1600px) {
+      margin-top: 40px;
+      font-size: 42px;
+    }
   }
 
   p {
@@ -486,6 +480,10 @@ const SongsWrapper = styled.div`
     @media (max-width: 1600px) {
       font-size: 16px;
     }
+
+    @media (max-width: 1366px) {
+      font-size: 14px;
+    }
   }
 
   .spline {
@@ -493,6 +491,11 @@ const SongsWrapper = styled.div`
 
     @media (max-width: 1600px) {
       transform: scale(0.8);
+    }
+
+    @media (max-width: 1366px) {
+      transform: scale(0.7);
+      margin-top: -35px;
     }
 
     :hover {
@@ -503,6 +506,10 @@ const SongsWrapper = styled.div`
   .spline-artist {
     @media (max-width: 1600px) {
       margin-top: -50px;
+    }
+    
+    @media (max-width: 1366px) {
+      margin-top: -80px;
     }
   }
 
@@ -531,11 +538,22 @@ const PodcastWrapper = styled.div`
       transform-origin: top right;
       margin-top: 20px;
     }
+
+    @media (max-width: 1366px) {
+      transform: scale(0.6);
+      transform-origin: top right;
+      margin-top: 20px;
+    }
   }
 
   .spline-batman {
     @media (max-width: 1600px) {
       transform: scale(0.85);
+      margin-top: -6rem;
+    }
+
+    @media (max-width: 1366px) {
+      transform: scale(0.75);
       margin-top: -6rem;
     }
 
@@ -555,6 +573,13 @@ const PodcastWrapper = styled.div`
       transform-origin: top right;
     }
 
+    @media (max-width: 1366px) {
+      transform: scale(0.65);
+      margin-right: -2rem;
+      transform-origin: top right;
+      top: 100px;
+    }
+
     :hover {
       cursor: pointer;
     }
@@ -567,6 +592,12 @@ const PodcastWrapper = styled.div`
     @media (max-width: 1600px) {
       top: -5rem;
       transform: scale(0.75);
+      transform-origin: left;
+    }
+
+    @media (max-width: 1366px) {
+      top: -6rem;
+      transform: scale(0.7);
       transform-origin: left;
     }
   }
@@ -593,6 +624,10 @@ const PodcastContent = styled.div`
     margin: 100px 100px;
   }
 
+  @media (max-width: 1366px) {
+    margin: 50px 100px;
+  }
+
   h1 {
     font-family: "Spline Sans Mono", monospace;
     font-weight: bold;
@@ -600,6 +635,11 @@ const PodcastContent = styled.div`
     margin: 0;
 
     @media (max-width: 1600px) {
+      margin-top: 60px;
+      font-size: 60px;
+    }
+
+    @media (max-width: 1366px) {
       margin-top: 60px;
       font-size: 60px;
     }
@@ -613,6 +653,12 @@ const PodcastContent = styled.div`
     @media (max-width: 1600px) {
       margin-top: 4rem;
       font-size: 20px;
+      max-width: 500px;
+    }
+
+    @media (max-width: 1366px) {
+      margin-top: 3rem;
+      font-size: 16px;
       max-width: 500px;
     }
   }
@@ -650,6 +696,12 @@ const BottomWrapper = styled.div`
       transform-origin: right;
       top: -3rem;
     }
+
+    @media (max-width: 1366px) {
+      transform: scale(0.65);
+      transform-origin: right;
+      top: -6rem;
+    }
   }
 `;
 
@@ -671,6 +723,10 @@ const BottomContent = styled.div`
     @media (max-width: 1600px) {
       font-size: 60px;
     }
+
+    @media (max-width: 1366px) {
+      font-size: 42px;
+    }
   }
 
   p {
@@ -679,6 +735,10 @@ const BottomContent = styled.div`
     @media (max-width: 1600px) {
       font-size: 16px;
     }
+
+    @media (max-width: 1366px) {
+      font-size: 14px;
+    }
   }
 
   .second-text {
@@ -686,6 +746,10 @@ const BottomContent = styled.div`
 
     @media (max-width: 1600px) {
       margin-top: 3rem;
+    }
+
+    @media (max-width: 1366px) {
+      margin-top: 1rem;
     }
   }
 
@@ -721,6 +785,17 @@ const Social = styled.ul`
           max-width: 32px;
         }
       }
+
+      @media (max-width: 1366px) {
+        img {
+          max-width: 28px;
+        }
+
+        a {
+          font-size: 14px;
+        }
+      }
+
       a {
         text-decoration: none;
         color: white;

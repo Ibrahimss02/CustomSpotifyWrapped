@@ -12,7 +12,7 @@ class LoadingText extends Component {
   componentDidMount() {
     this.timeout = setInterval(() => {
       this.setState({ text: textArray[Math.floor(Math.random() * textArray.length)] });
-    }, 100);
+    }, 2000);
   }
 
   componentWillUnmount() {
