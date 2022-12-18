@@ -7,14 +7,40 @@ import Blob2 from "./images/podcast_blob2.svg";
 import InstagramLogo from "./images/logo-instagram.svg";
 import LinkedInLogo from "./images/linkedin-logo.svg";
 import GithubLogo from "./images/logo_github.svg";
+import SpotifyNowPlaying from "./SpotifyNowPlaying";
+import { ChakraProvider } from "@chakra-ui/react";
+import LoadingText from "./LoadingText";
+import { useEffect, useState } from "react";
+
 
 export default function App() {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    disableScroll();
+  }, []);
+
+  function disableScroll() { 
+    console.log("disabled");
+    document.body.classList.add("remove-scrolling");
+  } 
+  
+  function enableScroll() { 
+    setTimeout(() => {
+      document.body.classList.remove("remove-scrolling");  
+      setLoading(false);
+    }, 5000);
+  }
+
+
   return (
     <>
       <Wrapper>
         <Spline
           className="spline"
           scene="https://prod.spline.design/BGDlXQOcZxz76ZEB/scene.splinecode"
+          onLoad={enableScroll}
         />
 
         <Content>
@@ -28,11 +54,12 @@ export default function App() {
             Spotify Wrapped
           </h1>
           <p>
-            Listen to my own curated Spotify year 2022 recap with some changes
+            Check out my own design of 2022 Spotify recap with some changes
             from Spotify original wrapped. Get to know about my accompanist thru
             the whole day and compare with yours. Who knows maybe we love the
             same type of songs. Cheers 🍻
           </p>
+          {loading ? <LoadingText/> : <></>}
         </Content>
       </Wrapper>
 
@@ -155,8 +182,19 @@ export default function App() {
             Thank you for showing interest in my own curated Spotify Wrapped.
             See you later. Cheerzz
           </p>
+          
+
+          
+        <ChakraProvider>
+          <SpotifyNowPlaying/>
+        </ChakraProvider>
           <p className="second-text">
             Made with hardwork not just ❤️ by @Ibrahimss02
+          </p>
+          <p>
+            Developed with <a href="https://codesandbox.io/">CodeSandbox</a> &{" "}
+            {"  "} <a href="https://spline.design/">Spline.design</a> for the
+            assets
           </p>
           <Social>
             <li>
@@ -196,11 +234,7 @@ export default function App() {
               </div>
             </li>
           </Social>
-          <p>
-            Developed with <a href="https://codesandbox.io/">CodeSandbox</a> &{" "}
-            {"  "} <a href="https://spline.design/">Spline.design</a> for the
-            assets
-          </p>
+          
         </BottomContent>
       </BottomWrapper>
     </>
@@ -348,6 +382,10 @@ const PlaytimeWrapper = styled.div`
     top: 0;
     right: 0;
 
+    :hover {
+      cursor: pointer;
+    }
+
     @media (max-width: 1600px) {
       transform: scale(0.75);
       transform-origin: top right;
@@ -456,6 +494,10 @@ const SongsWrapper = styled.div`
     @media (max-width: 1600px) {
       transform: scale(0.8);
     }
+
+    :hover {
+      cursor: pointer;
+    }
   }
 
   .spline-artist {
@@ -496,6 +538,10 @@ const PodcastWrapper = styled.div`
       transform: scale(0.85);
       margin-top: -6rem;
     }
+
+    :hover {
+      cursor: pointer;
+    }
   }
 
   .spline2 {
@@ -507,6 +553,10 @@ const PodcastWrapper = styled.div`
       transform: scale(0.7);
       margin-right: -2rem;
       transform-origin: top right;
+    }
+
+    :hover {
+      cursor: pointer;
     }
   }
 
@@ -558,6 +608,7 @@ const PodcastContent = styled.div`
   h2 {
     max-width: 600px;
     margin-top: 8rem;
+    font-size: 22px;
 
     @media (max-width: 1600px) {
       margin-top: 4rem;
@@ -603,12 +654,12 @@ const BottomWrapper = styled.div`
 `;
 
 const BottomContent = styled.div`
-  margin: 200px 100px;
+  margin: 100px 100px;
   color: white;
   position: absolute;
 
   @media (max-width: 1600px) {
-    margin: 150px 100px;
+    margin: 50px 100px;
   }
 
   h1 {
@@ -631,7 +682,7 @@ const BottomContent = styled.div`
   }
 
   .second-text {
-    margin-top: 6rem;
+    margin-top: 4rem;
 
     @media (max-width: 1600px) {
       margin-top: 3rem;
@@ -656,6 +707,7 @@ const Social = styled.ul`
   flex-direction: column;
   gap: 8px;
   padding: 0;
+  margin-top: 12px;
 
   li {
     list-style: none;

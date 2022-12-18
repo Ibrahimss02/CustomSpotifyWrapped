@@ -7,3 +7,8 @@ body,
   height: 100%;
   background: #663d26;
 }
+
+.remove-scrolling { 
+  height: 100%; 
+  overflow: hidden; 
+} 

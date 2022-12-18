@@ -1,26 +1,45 @@
 {
+  "homepage": "https://ibrahimss02.github.io/CustomSpotifyWrapped",
   "name": "customspotifywrapped",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@chakra-ui/react": "^2.4.4",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@splinetool/react-spline": "^2.2.1",
     "@splinetool/runtime": "^0.9.157",
+    "axios": "^1.2.1",
+    "framer-motion": "^7.10.2",
+    "query-string": "^8.0.3",
+    "querystring": "^0.2.1",
     "react": "^18.0.0",
+    "react-app-env": "^1.2.3",
     "react-dom": "^18.0.0",
-    "react-scripts": "^4.0.0",
-    "styled-components": "5.3.6"
+    "react-icons": "^4.7.1",
+    "react-scripts": "^5.0.1",
+    "styled-components": "5.3.6",
+    "swr": "^2.0.0"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
+    "gh-pages": "^4.0.0",
     "typescript": "4.1.3"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
