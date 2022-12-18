@@ -1,12 +1,8 @@
 {
-  "name": "mini-room-copy",
+  "name": "customspotifywrapped",
   "version": "1.0.0",
-  "description": "Scene exported with Spline",
-  "keywords": [
-    "react",
-    "spline",
-    "three.js"
-  ],
+  "description": "",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "@splinetool/react-spline": "^2.2.1",
