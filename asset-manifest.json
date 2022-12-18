@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/CustomSpotifyWrapped/static/css/main.f051a933.css",
+    "main.js": "/CustomSpotifyWrapped/static/js/main.9902901d.js",
+    "static/js/227.ce0e6c22.chunk.js": "/CustomSpotifyWrapped/static/js/227.ce0e6c22.chunk.js",
+    "static/js/526.7e41d92e.chunk.js": "/CustomSpotifyWrapped/static/js/526.7e41d92e.chunk.js",
+    "static/js/232.ff30db9c.chunk.js": "/CustomSpotifyWrapped/static/js/232.ff30db9c.chunk.js",
+    "static/js/237.50918097.chunk.js": "/CustomSpotifyWrapped/static/js/237.50918097.chunk.js",
+    "static/media/logo-instagram.svg": "/CustomSpotifyWrapped/static/media/logo-instagram.458fa3cbbe9f7e4819e0da64de213af9.svg",
+    "static/media/linkedin-logo.svg": "/CustomSpotifyWrapped/static/media/linkedin-logo.ae8fc511d53e6ca1f8906a77351acf1f.svg",
+    "static/media/logo_github.svg": "/CustomSpotifyWrapped/static/media/logo_github.1951d9eea4831e4171fef5e60b72df38.svg",
+    "index.html": "/CustomSpotifyWrapped/index.html",
+    "static/media/thunder_logo.svg": "/CustomSpotifyWrapped/static/media/thunder_logo.236fffedaa2097538d12157d5a518c1d.svg",
+    "static/media/podcast_blob.svg": "/CustomSpotifyWrapped/static/media/podcast_blob.6055f24a5febdf7ba205ac6403155d2e.svg",
+    "static/media/podcast_blob2.svg": "/CustomSpotifyWrapped/static/media/podcast_blob2.450ebb40fc558d30d036206cd30e23ac.svg",
+    "main.f051a933.css.map": "/CustomSpotifyWrapped/static/css/main.f051a933.css.map",
+    "main.9902901d.js.map": "/CustomSpotifyWrapped/static/js/main.9902901d.js.map",
+    "227.ce0e6c22.chunk.js.map": "/CustomSpotifyWrapped/static/js/227.ce0e6c22.chunk.js.map",
+    "526.7e41d92e.chunk.js.map": "/CustomSpotifyWrapped/static/js/526.7e41d92e.chunk.js.map",
+    "232.ff30db9c.chunk.js.map": "/CustomSpotifyWrapped/static/js/232.ff30db9c.chunk.js.map",
+    "237.50918097.chunk.js.map": "/CustomSpotifyWrapped/static/js/237.50918097.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f051a933.css",
+    "static/js/main.9902901d.js"
+  ]
+}
