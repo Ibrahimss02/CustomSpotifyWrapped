@@ -10,7 +10,7 @@ import GithubLogo from "./images/logo_github.svg";
 
 export default function App() {
   return (
-    <body>
+    <>
       <Wrapper>
         <Spline
           className="spline"
@@ -197,13 +197,13 @@ export default function App() {
             </li>
           </Social>
           <p>
-            Developed with <a href="https://spline.design/">Spline.design</a> &
-            {"  "}
-            <a href="https://codesandbox.io/">CodeSandbox</a>
+            Developed with <a href="https://codesandbox.io/">CodeSandbox</a> &{" "}
+            {"  "} <a href="https://spline.design/">Spline.design</a> for the
+            assets
           </p>
         </BottomContent>
       </BottomWrapper>
-    </body>
+    </>
   );
 }
 
