@@ -16,6 +16,7 @@ export default function App() {
           className="spline"
           scene="https://prod.spline.design/BGDlXQOcZxz76ZEB/scene.splinecode"
         />
+
         <Content>
           <Menu>
             <li>
@@ -82,7 +83,7 @@ export default function App() {
           scene="https://prod.spline.design/wXPExQgA5ynL8Jcb/scene.splinecode"
         />
         <Spline
-          className="spline"
+          className="spline spline-artist"
           scene="https://prod.spline.design/M2z0J34ypKe0surH/scene.splinecode"
         />
       </SongsWrapper>
@@ -106,6 +107,7 @@ export default function App() {
             </b>
           </p>
           <Spline
+            className="spline-batman"
             onClick={() =>
               openInNewTab(
                 "https://open.spotify.com/show/1PNSjCc2G8x8x4vo34jiWZ?si=488283a4e0ad4234"
@@ -196,7 +198,8 @@ export default function App() {
           </Social>
           <p>
             Developed with <a href="https://spline.design/">Spline.design</a> &
-            <a href="https://codesandbox.io/"> CodeSandbox</a>
+            {"  "}
+            <a href="https://codesandbox.io/">CodeSandbox</a>
           </p>
         </BottomContent>
       </BottomWrapper>
@@ -210,7 +213,6 @@ const openInNewTab = (url) => {
 
 const Wrapper = styled.div`
   font-family: "Spline Sans", sans-serif;
-  font-size: 16px;
   color: white;
   position: relative;
   width: 100%;
@@ -224,23 +226,9 @@ const Wrapper = styled.div`
     top: 0;
     right: 0;
 
-    @media (max-width: 1024px) {
-      transform: scale(0.8) translateX(200px);
-      transform-origin: top;
-    }
-    @media (max-width: 800px) {
-      transform: scale(0.7) translateX(600px);
-      right: auto;
-      margin-left: -600px;
-    }
-    @media (max-width: 600px) {
-      transform: scale(0.5) translateX(-100px);
-      right: auto;
-      left: 60%;
-      margin-left: -600px;
-    }
-    @media (max-width: 375px) {
-      transform: scale(0.45) translateX(-50px);
+    @media (max-width: 1600px) {
+      transform: scale(0.715);
+      transform-origin: top right;
     }
   }
 `;
@@ -252,7 +240,7 @@ const Content = styled.div`
   flex-direction: column;
   gap: 80px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1600px) {
     gap: 40px;
   }
 
@@ -263,16 +251,9 @@ const Content = styled.div`
     max-width: 800px;
     margin: 100px 30px 0 100px;
 
-    @media (max-width: 1024px) {
-      font-size: 60px;
-      max-width: 400px;
-    }
-    @media (max-width: 800px) {
-      font-size: 40px;
-      max-width: 300px;
-    }
-    @media (max-width: 600px) {
-      padding-top: 250px;
+    @media (max-width: 1600px) {
+      font-size: 50px;
+      max-width: 500px;
     }
   }
 
@@ -287,7 +268,7 @@ const Content = styled.div`
 
     @media (max-width: 1024px) {
       font-size: 60px;
-      max-width: 400px;
+      max-width: 300px;
     }
     @media (max-width: 800px) {
       font-size: 40px;
@@ -304,29 +285,9 @@ const Content = styled.div`
     max-width: 560px;
     margin: 0 30px 0 100px;
     font-size: 20px;
-  }
 
-  button {
-    background: rgba(0, 0, 0, 0);
-    border: 0px;
-    font-size: 16px;
-    padding: 12px 30px;
-    border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
-    max-width: 280px;
-    backdrop-filter: blur(20px);
-
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    align-items: center;
-
-    transition: 1s;
-
-    :hover {
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      transform: translateY(-3px);
+    @media (max-width: 1600px) {
+      font-size: 16px;
     }
   }
 
@@ -348,8 +309,8 @@ const Menu = styled.ul`
   margin: 50px 30px 0 100px;
   padding: 0;
 
-  @media (max-width: 1024px) {
-    margin: 0 30px;
+  @media (max-width: 1600px) {
+    margin: 15px 100px;
   }
 
   li {
@@ -367,16 +328,6 @@ const Menu = styled.ul`
       :hover {
         border: 1px solid rgba(255, 255, 255, 0.2);
       }
-    }
-  }
-
-  @media (max-width: 800px) {
-    justify-content: space-between;
-    li:nth-child(2),
-    li:nth-child(3),
-    li:nth-child(4),
-    li:nth-child(5) {
-      display: none;
     }
   }
 `;
@@ -397,23 +348,9 @@ const PlaytimeWrapper = styled.div`
     top: 0;
     right: 0;
 
-    @media (max-width: 1024px) {
-      transform: scale(0.8) translateX(200px);
-      transform-origin: top;
-    }
-    @media (max-width: 800px) {
-      transform: scale(0.7) translateX(600px);
-      right: auto;
-      margin-left: -600px;
-    }
-    @media (max-width: 600px) {
-      transform: scale(0.5) translateX(-100px);
-      right: auto;
-      left: 60%;
-      margin-left: -600px;
-    }
-    @media (max-width: 375px) {
-      transform: scale(0.45) translateX(-50px);
+    @media (max-width: 1600px) {
+      transform: scale(0.75);
+      transform-origin: top right;
     }
   }
 `;
@@ -425,8 +362,8 @@ const PlaytimeContent = styled.div`
   flex-direction: column;
   gap: 80px;
 
-  @media (max-width: 1024px) {
-    gap: 40px;
+  @media (max-width: 1600px) {
+    gap: 60px;
   }
 
   h1 {
@@ -436,38 +373,23 @@ const PlaytimeContent = styled.div`
     color: #655cb8;
     margin: 250px 30px 0 100px;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1600px) {
       font-size: 60px;
-      max-width: 400px;
-    }
-    @media (max-width: 800px) {
-      font-size: 40px;
-      max-width: 300px;
-    }
-    @media (max-width: 600px) {
-      padding-top: 250px;
+      max-width: 600px;
+      margin: 200px 30px 0 100px;
     }
   }
 
   h2 {
     font-family: "Spline Sans Mono", monospace;
     color: #5786ca;
-    font-weight: bold;
     font-size: 70px;
     margin: 0;
     max-width: 800px;
     margin: 0 30px 0 100px;
 
-    @media (max-width: 1024px) {
-      font-size: 60px;
-      max-width: 400px;
-    }
-    @media (max-width: 800px) {
-      font-size: 40px;
-      max-width: 300px;
-    }
-    @media (max-width: 600px) {
-      padding-top: 250px;
+    @media (max-width: 1600px) {
+      font-size: 42px;
     }
   }
 
@@ -477,29 +399,10 @@ const PlaytimeContent = styled.div`
     margin: -20px 30px 0 100px;
     font-size: 20px;
     text-align: justify;
-  }
 
-  button {
-    background: rgba(0, 0, 0, 0);
-    border: 0px;
-    font-size: 16px;
-    padding: 12px 30px;
-    border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
-    max-width: 280px;
-    backdrop-filter: blur(20px);
-
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    align-items: center;
-
-    transition: 1s;
-
-    :hover {
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      transform: translateY(-3px);
+    @media (max-width: 1600px) {
+      font-size: 16px;
+      max-width: 500px;
     }
   }
 
@@ -529,6 +432,11 @@ const SongsWrapper = styled.div`
     font-weight: bold;
     font-size: 70px;
     margin: 0;
+
+    @media (max-width: 1600px) {
+      margin-top: 60px;
+      font-size: 60px;
+    }
   }
 
   p {
@@ -536,10 +444,24 @@ const SongsWrapper = styled.div`
     display: block;
     max-width: 600px;
     margin: 24px auto;
+
+    @media (max-width: 1600px) {
+      font-size: 16px;
+    }
   }
 
   .spline {
     margin: 0 auto;
+
+    @media (max-width: 1600px) {
+      transform: scale(0.8);
+    }
+  }
+
+  .spline-artist {
+    @media (max-width: 1600px) {
+      margin-top: -50px;
+    }
   }
 
   .spline-blob {
@@ -561,23 +483,53 @@ const PodcastWrapper = styled.div`
     margin: 0;
     top: 0;
     right: 0;
+
+    @media (max-width: 1600px) {
+      transform: scale(0.7);
+      transform-origin: top right;
+      margin-top: 20px;
+    }
+  }
+
+  .spline-batman {
+    @media (max-width: 1600px) {
+      transform: scale(0.85);
+      margin-top: -6rem;
+    }
   }
 
   .spline2 {
     position: absolute;
     right: 250px;
     top: 150px;
+
+    @media (max-width: 1600px) {
+      transform: scale(0.7);
+      margin-right: -2rem;
+      transform-origin: top right;
+    }
   }
 
   .blob {
     position: absolute;
     top: 42px;
+
+    @media (max-width: 1600px) {
+      top: -5rem;
+      transform: scale(0.75);
+      transform-origin: left;
+    }
   }
 
   .blob2 {
     position: absolute;
     bottom: 0;
     right: 0;
+
+    @media (max-width: 1600px) {
+      transform: scale(0.7);
+      transform-origin: bottom right;
+    }
   }
 `;
 
@@ -587,22 +539,41 @@ const PodcastContent = styled.div`
   position: absolute;
   margin: 200px 100px;
 
+  @media (max-width: 1600px) {
+    margin: 100px 100px;
+  }
+
   h1 {
     font-family: "Spline Sans Mono", monospace;
     font-weight: bold;
     font-size: 70px;
     margin: 0;
+
+    @media (max-width: 1600px) {
+      margin-top: 60px;
+      font-size: 60px;
+    }
   }
 
   h2 {
     max-width: 600px;
     margin-top: 8rem;
+
+    @media (max-width: 1600px) {
+      margin-top: 4rem;
+      font-size: 20px;
+      max-width: 500px;
+    }
   }
 
   p {
     max-width: 500px;
     margin-top: 36px;
     font-size: 20px;
+
+    @media (max-width: 1600px) {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -614,10 +585,20 @@ const BottomWrapper = styled.div`
   width: 100%;
   height: 100%;
 
+  @media (max-width: 1600px) {
+    margin-top: -4rem;
+  }
+
   .spline {
     position: absolute;
     right: 0;
     top: 30px;
+
+    @media (max-width: 1600px) {
+      transform: scale(0.7);
+      transform-origin: right;
+      top: -3rem;
+    }
   }
 `;
 
@@ -626,24 +607,47 @@ const BottomContent = styled.div`
   color: white;
   position: absolute;
 
+  @media (max-width: 1600px) {
+    margin: 150px 100px;
+  }
+
   h1 {
     font-family: "Spline Sans Mono", monospace;
     font-weight: bold;
     font-size: 70px;
     margin: 0;
+
+    @media (max-width: 1600px) {
+      font-size: 60px;
+    }
   }
 
   p {
     max-width: 500px;
+
+    @media (max-width: 1600px) {
+      font-size: 16px;
+    }
   }
 
   .second-text {
     margin-top: 6rem;
+
+    @media (max-width: 1600px) {
+      margin-top: 3rem;
+    }
   }
 
   a {
     text-decoration: none;
     color: white;
+
+    @media (max-width: 1600px) {
+      font-size: 16px;
+    }
+  }
+  a:hover {
+    text-decoration: underline;
   }
 `;
 
@@ -653,10 +657,6 @@ const Social = styled.ul`
   gap: 8px;
   padding: 0;
 
-  @media (max-width: 1024px) {
-    margin: 0 30px;
-  }
-
   li {
     list-style: none;
 
@@ -664,10 +664,19 @@ const Social = styled.ul`
       display: flex;
       align-items: center;
 
+      @media (max-width: 1600px) {
+        img {
+          max-width: 32px;
+        }
+      }
       a {
         text-decoration: none;
         color: white;
         margin-left: 12px;
+      }
+
+      a:hover {
+        text-decoration: underline;
       }
     }
   }
