@@ -31,7 +31,7 @@ export default function App() {
     setTimeout(() => {
       document.body.classList.remove("remove-scrolling");  
       setLoading(false);
-    }, 5000);
+    }, 15000);
   }
 
 
@@ -59,6 +59,10 @@ export default function App() {
             from Spotify original wrapped. Get to know about my accompanist thru
             the whole day and compare with yours. Who knows maybe we love the
             same type of songs. Cheers 🍻
+
+            <br/>
+            <br/>
+            Website feels laggy? Try turning on your browser <a href="https://help.glorify.com/en/articles/3730301-turn-hardware-acceleration-on-in-google-chrome">hardware acceleration.</a>
           </p>
           {loading ? <LoadingText/> : <></>}
         </Content>
@@ -180,7 +184,7 @@ export default function App() {
         <BottomContent>
           <h1>That’s It</h1>
           <p>
-            Thank you for showing interest in my own curated Spotify Wrapped.
+            Thank you for showing interest in my own designed Spotify Wrapped.
             See you later. Cheerzz
           </p>
           
@@ -275,7 +279,7 @@ const Wrapper = styled.div`
 
 const Content = styled.div`
   position: absolute;
-  top: 30px;
+  top: 25px;
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -293,7 +297,7 @@ const Content = styled.div`
     font-weight: bold;
     font-size: 70px;
     max-width: 800px;
-    margin: 100px 30px 0 100px;
+    margin: 30px 30px 0 100px;
 
     @media (max-width: 1600px) {
       font-size: 50px;
@@ -303,7 +307,7 @@ const Content = styled.div`
     @media (max-width: 1366px) {
       font-size: 42px;
       max-width: 500px;
-      margin: 80px 30px 0 75px;
+      margin: 10px 30px 0 75px;
     }
   }
 
@@ -322,6 +326,10 @@ const Content = styled.div`
       font-size: 16px;
       margin: 0 30px 0 75px;
     }
+  }
+
+  a {
+    text-decoration: underline;
   }
 
 `;
@@ -700,7 +708,7 @@ const BottomWrapper = styled.div`
     @media (max-width: 1366px) {
       transform: scale(0.65);
       transform-origin: right;
-      top: -6rem;
+      top: -7rem;
     }
   }
 `;

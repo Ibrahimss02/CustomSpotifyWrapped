@@ -6,7 +6,6 @@ import {
   Text,
   Link,
   Spinner,
-  useMediaQuery,
 } from "@chakra-ui/react";
 import styled from "styled-components";
 import getNowPlayingItem from "./SpotifyApi";
@@ -52,11 +51,6 @@ const SpotifyNowPlaying = (props) => {
                     alt={`${result.title} album art`}
                     src={result.albumImageUrl}
                     boxSize="85px"
-                    sx={{
-                      '@media (max-width: 1600px)': {
-                        boxSize: "80px",
-                      },
-                    }}
                   />
                   <Stack spacing={0} overflow="hidden">
                     <Link href={result.songUrl} target="_blank">

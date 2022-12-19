@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ChakraProvider, Spinner, Stack, Text } from "@chakra-ui/react";
 
-const textArray = ["Please wait until the page is fully loaded...", "Try clicking some models later 👀", "Ini dikerjain 3 hari loh", "Fun fact: Ini project react pertamaku", "Source code ini no clean code sama sekali. 🤫", "How's your day?", "Why did I create this? Idk I just like 3d", "Loading assets from spline.design", "I did not create all of the asset"]
+const textArray = ["Please wait until the page is fully loaded...", "Messi is GOAT. 🐐", "VAMOSSS. 🇦🇷", "Try clicking some models later 👀", "Feels laggy? Make sure to turn on your hardware acceleration", "This is my first React JS Project", "Source code ini no clean code sama sekali. 🤫", "How's your day?", "Loading some assets from spline.design...", "I did not create all of the asset"]
 
 class LoadingText extends Component {
   constructor() {

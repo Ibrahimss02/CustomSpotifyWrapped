@@ -9,28 +9,28 @@ const client_secret = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
 const refresh_token = process.env.REACT_APP_SPOTIFY_REFRESH_TOKEN;
 
 const getAccessToken = async () => {
-  const basic = "YzY3ZGE3NDNkMjUyNGE2NmFiMDAyMDYyNDk5NGY5Y2I6NTRhMDY3NDc0NzhkNDJkZmE0ZDgzN2FmZTM3NDM3YTQ=";
 
   const response = await fetch(TOKEN_ENDPOINT, {
     method: "POST",
     headers: {
-      Authorization: `Basic ${basic}`,
       "Content-Type": "application/x-www-form-urlencoded",
     },
     body: querystring.stringify({
       grant_type: "refresh_token",
       refresh_token,
+      client_id,
+      client_secret,
     }),
   });
 
+  
   return response.json();
 };
 
-export const getNowPlaying = async (client_id, client_secret, refresh_token) => {
+export const getNowPlaying = async (client_id, client_secret) => {
   const { access_token } = await getAccessToken(
     client_id,
-    client_secret,
-    refresh_token
+    client_secret
   );
 
   return fetch(NOW_PLAYING_ENDPOINT, {
@@ -61,7 +61,8 @@ export default async function getNowPlayingItem(
 ) {
   const response = await getNowPlaying(client_id, client_secret, refresh_token);
   const deviceResponse = await getDevice(client_id, client_secret, refresh_token);
-  if (response.status === 204 || response.status > 400) {
+
+  if ((response.status === 204 || response.status > 400) && (deviceResponse.status === 204 || deviceResponse.status > 400)) {
     return false;
   }
 
